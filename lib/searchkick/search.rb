@@ -149,6 +149,10 @@ module Searchkick
         payload[:sort] = order
       end
 
+      if options[:min_score]
+        payload[:min_score] = options[:min_score]
+      end
+
       # where
       # TODO expand or
       where_filters =
